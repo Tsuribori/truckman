@@ -1,6 +1,6 @@
 import argparse
-from save import save_volume
-from load import load_volume
+from truckman.save import save_volume
+from truckman.load import load_volume
 
 
 def main(args=None):
@@ -36,7 +36,5 @@ def main(args=None):
         )
     elif args.load and args.name:
         load_volume(volume_path=args.load, volume_name=args.name)
-
-
-if __name__ == "__main__":
-    main()
+    else:
+        parser.print_help()

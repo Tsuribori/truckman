@@ -17,13 +17,13 @@ setup(
     author_email="tsuribori@tutanota.com",
     url="https://github.com/Tsuribori/truckman",
     keywords="docker volume save load backup transfer",
-    package_dir={"": "truckman"},
-    packages=find_packages(where="truckman"),
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
     python_requires=">=3.5",
     install_requires=['docker'],
     entry_points={
       'console_scripts': [
-          'truckman=truckman.__main__:main'
+          'truckman=truckman:main'
       ]
     },
     classifiers=[
